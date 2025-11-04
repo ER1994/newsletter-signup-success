@@ -1,0 +1,51 @@
+@import "./node_modules/modern-css-reset/dist/reset.min.css";
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /*COLORS*/
+    --white: hsl(0, 100%, 100%);
+    --grey: hsl(0, 0%, 58%);
+    --blue-800: hsl(234, 29%, 20%);
+    --blue-700: hsl(235, 18%, 26%);
+    --red: hsl(4, 100%, 67%);
+    --red-pale: hsl(2, 100%, 95%, 1);
+
+    /*FONTS*/
+    --font-family: 'Roboto', sans-serif;
+    --font-weight-bold: bold;
+    --font-weight-regular: normal;
+
+    --font-size-xl: 56px;
+    --font-size-large: 40px;
+    --font-size-regular: 16px;
+    --font-size-small: 12px;
+
+    --line-height-150: 1.5;
+    --line-height-100: 1;
+
+    --letter-spacing: 0;
+
+    /*SPACING*/
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-900: 72px;
+    --spacing-1300: 104px;
+}

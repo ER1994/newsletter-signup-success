@@ -1,0 +1,244 @@
+body {
+    width: 100vw;
+    /*height: 100vh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-700);
+}
+
+main {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.signup-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+    padding-bottom: var(--spacing-500);
+}
+
+picture {
+    width: 100%;
+}
+
+.signup-content {
+    padding: 0 var(--spacing-300);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+h1 {
+    font: var(--font-weight-bold) var(--font-size-large)/var(--line-height-100) var(--font-family);
+    letter-spacing: var(--letter-spacing);
+}
+
+p {
+    font: var(--font-weight-regular) var(--font-size-regular)/var(--line-height-150) var(--font-family);
+    letter-spacing: var(--letter-spacing);
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+}
+
+ul li {
+    position: relative;
+    padding-left: 40px;
+
+}
+
+ul li::before {
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-image: url("/assets/images/icon-list.svg");
+    position: absolute;
+    left: 0;
+}
+
+form {
+    margin-top: calc(40px - var(--spacing-300));
+    display: flex;
+    flex-direction: column;
+}
+.label-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-form-name {
+    font: var(--font-weight-bold) var(--font-size-small)/var(--line-height-150) var(--font-family);
+    margin-bottom: var(--spacing-100);
+}
+
+.signup-form-email {
+    border-radius: var(--spacing-100);
+    padding: var(--spacing-200) var(--spacing-300);
+    border: solid 1px var(--grey);
+    margin-bottom: var(--spacing-300);
+}
+
+.signup-form-email::placeholder {
+    color: var(--grey);
+}
+
+.signup-form-btn {
+    background-color: var(--blue-800);
+    color: var(--white);
+    font: var(--font-weight-bold) var(--font-size-regular)/var(--line-height-150) var(--font-family);
+    padding: var(--spacing-200) var(--spacing-600);
+    border-radius: var(--spacing-100);
+}
+
+.signup-form-btn:active {
+    background: linear-gradient(to right, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
+    border: none;
+    box-shadow: 0 16px 32px 0 hsl(4, 100%, 67%, 0.5);
+}
+
+/*CSS for form validation start */
+.signup-form-email__error {
+    border-color: var(--red);
+    color: var(--red);
+    background-color: var(--red-pale);
+}
+
+.signup-form-email__error:invalid::placeholder {
+    color: var(--red);
+}
+
+.error-message {
+    color: var(--red);
+    font: var(--font-weight-bold) var(--font-size-small)/var(--line-height-150) var(--font-family);
+    letter-spacing: var(--letter-spacing);
+    display: none;
+}
+
+.error-message__active {
+    display: block;
+}
+/*CSS for form validation end */
+
+/*CSS for success message start - ORIGINALLY HIDDEN*/
+.signup-success {
+    display: none;
+    width: 375px;
+    height: 100%;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--spacing-1300) var(--spacing-300) var(--spacing-300); /* góra, boki, dół */
+}
+
+.signup-success-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    justify-content: center;
+    padding: var(--spacing-300) 0;
+    margin-bottom: var(--spacing-1300);
+}
+
+.signup-success button {
+    background-color: var(--blue-800);
+    color: var(--white);
+    font: var(--font-weight-bold) var(--font-size-regular)/var(--line-height-150) var(--font-family);
+    letter-spacing: var(--letter-spacing);
+    padding: var(--spacing-200) var(--spacing-900);
+    border: none;
+    border-radius: var(--spacing-100);
+    width: 100%;
+    margin-top: var(--spacing-1300);
+}
+
+.signup-success-content h1 {
+    font: var(--font-weight-bold) var(--font-size-large)/var(--line-height-100) var(--font-family);
+}
+
+.signup-success-content p {
+    font: var(--font-weight-regular) var(--font-size-regular)/var(--line-height-150) var(--font-family);
+}
+
+.signup-success button:active {
+    background: linear-gradient(to right, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
+    box-shadow: 0 16px 32px 0 hsl(4, 100%, 67%, 0.5) ;
+}
+/*CSS for success message end - ORIGINALLY HIDDEN*/
+
+@media (min-width: 768px) {
+    main {
+        width: 608px;
+        background-color: var(--blue-700);
+    }
+
+    .signup-section {
+        padding: var(--spacing-500);
+        background-color: var(--white);
+    }
+
+    .signup-main-img {
+        width: 100%;
+    }
+
+    .signup-content h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    /*CSS for success message start - ORIGINALLY HIDDEN*/
+    .signup-success {
+        width: 504px;
+        padding: var(--spacing-800);
+        background-color: var(--white);
+        border-radius: var(--spacing-400);
+        justify-content: center;
+    }
+
+    .signup-success-content {
+        margin-bottom: 0;
+    }
+
+    .signup-success-content h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .signup-success button {
+        margin-top: 0;
+    }
+    /*CSS for success message end - ORIGINALLY HIDDEN*/
+}
+
+@media (min-width: 1440px) {
+    main {
+        width: 904px;
+    }
+
+    .signup-section {
+        padding: var(--spacing-400);
+        flex-direction: row-reverse;
+        gap: var(--spacing-800);
+        align-items: center;
+    }
+
+    picture {
+        width: 400px;
+    }
+
+    .signup-content {
+        width: 376px;
+        height: 450px;
+        padding: 0;
+    }
+}
